@@ -1,0 +1,14 @@
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\bin\Debug\netcoreapp2.1\DoctorAPI.deps.json
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\bin\Debug\netcoreapp2.1\DoctorAPI.runtimeconfig.json
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\bin\Debug\netcoreapp2.1\DoctorAPI.runtimeconfig.dev.json
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\bin\Debug\netcoreapp2.1\DoctorAPI.dll
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.csprojAssemblyReference.cache
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.csproj.CoreCompileInputs.cache
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.RazorAssemblyInfo.cache
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.RazorAssemblyInfo.cs
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.AssemblyInfoInputs.cache
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.AssemblyInfo.cs
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.RazorTargetAssemblyInfo.cache
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\bin\Debug\netcoreapp2.1\DoctorAPI.pdb
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.dll
+C:\Users\802507\source\repos\DoctorAPI\DoctorAPI\obj\Debug\netcoreapp2.1\DoctorAPI.pdb

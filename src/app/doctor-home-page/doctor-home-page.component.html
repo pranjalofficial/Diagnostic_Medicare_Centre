@@ -1,0 +1,119 @@
+<!-- 
+      section is there for tabs -->
+
+<section style="background:#ffffff;">
+  <div class="container">
+    <div class="row">
+      <div class="board">
+        <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+        <div class="board-inner">
+          <ul class="nav nav-tabs" id="myTab">
+            <li class="active">
+              <a href="#booking" data-toggle="tab" title="welcome">
+                <i class="material-icons">
+                  assignment
+                </i>
+                <p>Appointment Status</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#medicare" data-toggle="tab" title="profile">
+                <i class="material-icons">
+                  assignment_turned_in
+                </i>
+                <p>Update Medicare Services</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#appointments"
+                data-toggle="tab"
+                title="bootsnipp goodies"
+              >
+                <i class="material-icons">
+                  announcement
+                </i>
+                <p>Appointments</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div id="booking" class="tab-pane fade in active">
+            <tr *ngFor="let item of appointmentDetails">
+              <td>{{ item.apAppointmentId }}</td>
+              <td>{{ item.apDate | date }}</td>
+              <td>{{ item.apTime }}</td>
+              <td>{{ item.apPtUser }}</td>
+              <td>
+                <input
+                  type="submit"
+                  class="btn btn-success"
+                  value="Approve"
+                  (click)="approve(item.apAppointmentId)"
+                />
+              </td>
+              <td>
+                <input
+                  type="submit"
+                  class="btn btn-danger"
+                  value="Deny"
+                  (click)="deny(item.apAppointmentId)"
+                />
+              </td>
+            </tr>
+          </div>
+          <div class="tab-content">
+                <div id="medicare" class="tab-pane fade in active">
+          <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                <div class="form-group row">
+                    <label class="col-sm-3 control-label">MediCare Service ID: {{drDetails.drMedicareId}}</label>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 control-label" for="medName">Medicare Service Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="medName" id="medName" #medName="ngModel"
+                            value="fullMedicareDetails.mdMedicareService" [(ngModel)]="fullMedicareDetails.mdMedicareService" required>
+                        <div class="alert alert-danger" *ngIf="f.submitted && medName.invalid">
+                            Medicare Service name is a required field
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="medDesc" class="col-sm-3 control-label">Medicare Service Description</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" name="medDesc" #medDesc="ngModel"
+                            [(ngModel)]="fullMedicareDetails.mdServiceDesp" required>{{fullMedicareDetails.mdServiceDesp}}</textarea>
+                        <div class="alert alert-danger" *ngIf="f.submitted && medDesc.invalid">
+                            fullMedicareDetails Service description is a required field
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="form-group row">
+                    <label for="medAmount" class="col-sm-3 control-label">Amount</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="number" name="medAmount" #medAmount="ngModel"
+                            [(ngModel)]="fullMedicareDetails.mdAmount" value="fullMedicareDetails.mdAmount" max=>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-info btn-block" value="Update Medicare Service" />
+            </form>
+    </div>
+          </div>
+
+          <div class="tab-pane fade" id="appointments">
+            <tr *ngFor="let item of drAppointment">
+              <td>{{ item.apAppointmentId }}</td>
+              <td>{{ item.apDate | date }}</td>
+              <td>{{ item.apTime }}</td>
+              <td>{{ item.apPtUser }}</td>
+            </tr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

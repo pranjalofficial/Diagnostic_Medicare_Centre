@@ -1,0 +1,14 @@
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\bin\Debug\netcoreapp2.1\BookingAppointmentAPI.deps.json
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\bin\Debug\netcoreapp2.1\BookingAppointmentAPI.runtimeconfig.json
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\bin\Debug\netcoreapp2.1\BookingAppointmentAPI.runtimeconfig.dev.json
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\bin\Debug\netcoreapp2.1\BookingAppointmentAPI.dll
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\bin\Debug\netcoreapp2.1\BookingAppointmentAPI.pdb
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.csproj.CoreCompileInputs.cache
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.RazorAssemblyInfo.cache
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.RazorAssemblyInfo.cs
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.AssemblyInfoInputs.cache
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.AssemblyInfo.cs
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.RazorTargetAssemblyInfo.cache
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.dll
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.pdb
+C:\Users\802507\source\repos\BookingAppointmentAPI\BookingAppointmentAPI\obj\Debug\netcoreapp2.1\BookingAppointmentAPI.csprojAssemblyReference.cache

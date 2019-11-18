@@ -1,0 +1,14 @@
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\bin\Debug\netcoreapp2.1\RegistrationLoginAPI.deps.json
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\bin\Debug\netcoreapp2.1\RegistrationLoginAPI.runtimeconfig.json
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\bin\Debug\netcoreapp2.1\RegistrationLoginAPI.runtimeconfig.dev.json
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\bin\Debug\netcoreapp2.1\RegistrationLoginAPI.dll
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\bin\Debug\netcoreapp2.1\RegistrationLoginAPI.pdb
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.csprojAssemblyReference.cache
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.csproj.CoreCompileInputs.cache
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.RazorAssemblyInfo.cache
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.RazorAssemblyInfo.cs
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.AssemblyInfoInputs.cache
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.AssemblyInfo.cs
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.RazorTargetAssemblyInfo.cache
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.dll
+C:\Users\802507\source\repos\RegistrationLoginAPI\RegistrationLoginAPI\obj\Debug\netcoreapp2.1\RegistrationLoginAPI.pdb

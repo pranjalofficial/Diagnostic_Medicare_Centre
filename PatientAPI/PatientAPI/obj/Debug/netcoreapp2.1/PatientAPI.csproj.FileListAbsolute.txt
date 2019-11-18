@@ -1,0 +1,14 @@
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\bin\Debug\netcoreapp2.1\PatientAPI.deps.json
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\bin\Debug\netcoreapp2.1\PatientAPI.runtimeconfig.json
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\bin\Debug\netcoreapp2.1\PatientAPI.runtimeconfig.dev.json
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\bin\Debug\netcoreapp2.1\PatientAPI.dll
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\bin\Debug\netcoreapp2.1\PatientAPI.pdb
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.csproj.CoreCompileInputs.cache
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.RazorAssemblyInfo.cache
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.RazorAssemblyInfo.cs
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.AssemblyInfoInputs.cache
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.AssemblyInfo.cs
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.RazorTargetAssemblyInfo.cache
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.dll
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.pdb
+C:\Users\802507\source\repos\PatientAPI\PatientAPI\obj\Debug\netcoreapp2.1\PatientAPI.csprojAssemblyReference.cache

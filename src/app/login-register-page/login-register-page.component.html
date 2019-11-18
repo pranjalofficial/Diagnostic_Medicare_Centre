@@ -1,0 +1,480 @@
+<div class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Welcome</h3>
+      <input
+        type="submit"
+        name=""
+        value="Login"
+        [routerLink]="['/Login/']"
+      /><br />
+    </div>
+    <div class="col-md-9 register-right">
+      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="home-tab"
+            data-toggle="tab"
+            href="#home"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+            >Patient</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="profile-tab"
+            data-toggle="tab"
+            href="#profile"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            >Doctor</a
+          >
+        </li>
+      </ul>
+      <!-- Patient Registration Form -->
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <h3 class="register-heading">Register as a Patient</h3>
+          <form (ngSubmit)="onSubmit()">
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name *"
+                    name="firstname"
+                    [(ngModel)]="patientDetails.ptFirstName"
+                    #firstname="ngModel"
+                    required
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="firstname.touched && !firstname.valid"
+                  >
+                    *First name is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name *"
+                    name="lastname"
+                    [(ngModel)]="patientDetails.ptLastName"
+                    #lastname="ngModel"
+                    required
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="lastname.touched && !lastname.valid"
+                  >
+                    *Last name is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password *"
+                    name="password"
+                    [(ngModel)]="patientDetails.ptPassword"
+                    #password="ngModel"
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="password.touched && !password.valid"
+                  >
+                    *Password is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="15"
+                    class="form-control"
+                    name="city"
+                    [(ngModel)]="patientDetails.ptCity"
+                    #city="ngModel"
+                    placeholder="Your City *"
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="city.touched && !city.valid"
+                  >
+                    *City is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="30"
+                    class="form-control"
+                    name="state"
+                    [(ngModel)]="patientDetails.ptState"
+                    #state="ngModel"
+                    placeholder="Your State *"
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="state.touched && !state.valid"
+                  >
+                    *State is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    maxlength="6"
+                    class="form-control"
+                    name="zipcode"
+                    [(ngModel)]="patientDetails.ptZipcode"
+                    #zipcode="ngModel"
+                    placeholder="Your Zipcode *"
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="zipcode.touched && !zipcode.valid"
+                  >
+                    *ZipCode is required
+                  </div>
+                </div>
+                <!-- <div class="form-group">
+                                    <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                </div> -->
+                <div class="form-group" style="padding-top: 2%;">
+                  <div class="maxl">
+                    <label class="radio inline" style="padding-right: 35px;">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        [(ngModel)]="patientDetails.ptGender"
+                        #gender="ngModel"
+                      />
+                      <span> Male </span>
+                    </label>
+                    <label class="radio inline">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        [(ngModel)]="patientDetails.ptGender"
+                        #gender="ngModel"
+                      />
+                      <span>Female </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Your Email *"
+                    value=""
+                    [(ngModel)]="patientDetails.ptEmail"
+                    #email="ngModel"
+                    required
+                    email
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="email.touched && !email.valid"
+                  >
+                    *Email is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    minlength="10"
+                    maxlength="10"
+                    class="form-control"
+                    name="contactNo"
+                    [(ngModel)]="patientDetails.ptContactNo"
+                    #contactNo="ngModel"
+                    placeholder="Your Phone *"
+                  />
+                  <div
+                    class="text-error text-danger"
+                    *ngIf="contactNo.touched && !contactNo.valid"
+                  >
+                    *Contact Number is required
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    minlength="10"
+                    maxlength="10"
+                    class="form-control"
+                    name="altContactNo"
+                    [(ngModel)]="patientDetails.ptAltContactNo"
+                    #altContactNo="ngModel"
+                    placeholder="Your Alternate Phone *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    minlength="1"
+                    maxlength="3"
+                    class="form-control"
+                    name="age"
+                    [(ngModel)]="patientDetails.ptAge"
+                    #age="ngModel"
+                    placeholder="Your Age *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="date"
+                    class="form-control"
+                    name="dob"
+                    [(ngModel)]="patientDetails.ptDob"
+                    #dob="ngModel"
+                    placeholder="Your Date of Birth *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="30"
+                    class="form-control"
+                    name="address1"
+                    [(ngModel)]="patientDetails.ptAddress1"
+                    #address1="ngModel"
+                    placeholder="Your Address line 1 *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="30"
+                    class="form-control"
+                    name="address2"
+                    [(ngModel)]="patientDetails.ptAddress2"
+                    #address2="ngModel"
+                    placeholder="Your Address line 2 *"
+                  />
+                </div>
+
+                <input type="submit" class="btnRegister" value="Register" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Patient registration form Ends here -->
+
+        <!-- Doctor Registration Form -->
+        <!-- Patient Registration Form -->
+
+        <div
+          class="tab-pane fade"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <h3 class="register-heading">Register as a Docotor</h3>
+          <form (ngSubmit)="onSubmit()">
+            <div class="row register-form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name *"
+                    name="firstname"
+                    [(ngModel)]="patientDetails.ptFirstName"
+                    #first="ngModel"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name *"
+                    name="lastname"
+                    [(ngModel)]="patientDetails.ptLastName"
+                    #last="ngModel"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password *"
+                    name="password"
+                    [(ngModel)]="patientDetails.ptPassword"
+                    #pass="ngModel"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="15"
+                    class="form-control"
+                    name="city"
+                    [(ngModel)]="patientDetails.ptCity"
+                    #citi="ngModel"
+                    placeholder="Your City *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="30"
+                    class="form-control"
+                    name="state"
+                    [(ngModel)]="patientDetails.ptState"
+                    #stat="ngModel"
+                    placeholder="Your State *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    maxlength="6"
+                    class="form-control"
+                    name="zipcode"
+                    [(ngModel)]="patientDetails.ptZipcode"
+                    #zipco="ngModel"
+                    placeholder="Your Zipcode *"
+                  />
+                </div>
+                <!-- <div class="form-group">
+                                                        <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
+                                                    </div> -->
+                <div class="form-group" style="padding-top: 2%;">
+                  <div class="maxl">
+                    <label class="radio inline" style="padding-right: 35px;">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        [(ngModel)]="patientDetails.ptGender"
+                        #gender="ngModel"
+                      />
+                      <span> Male </span>
+                    </label>
+                    <label class="radio inline">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        [(ngModel)]="patientDetails.ptGender"
+                        #gender="ngModel"
+                      />
+                      <span>Female </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input
+                    type="Email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Your Email *"
+                    value=""
+                    [(ngModel)]="patientDetails.ptEmail"
+                    #emai="ngModel"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    minlength="10"
+                    maxlength="10"
+                    class="form-control"
+                    name="contactNo"
+                    [(ngModel)]="patientDetails.ptContactNo"
+                    #contactN="ngModel"
+                    placeholder="Your Phone *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    minlength="10"
+                    maxlength="10"
+                    class="form-control"
+                    name="altContactNo"
+                    [(ngModel)]="patientDetails.ptAltContactNo"
+                    #altContactN="ngModel"
+                    placeholder="Your Alternate Phone *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    minlength="1"
+                    maxlength="3"
+                    class="form-control"
+                    name="age"
+                    [(ngModel)]="patientDetails.ptAge"
+                    #ageis="ngModel"
+                    placeholder="Your Age *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="date"
+                    class="form-control"
+                    name="dob"
+                    [(ngModel)]="patientDetails.ptDob"
+                    #dobof="ngModel"
+                    placeholder="Your Date of Birth *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="30"
+                    class="form-control"
+                    name="address1"
+                    [(ngModel)]="patientDetails.ptAddress1"
+                    #addressone="ngModel"
+                    placeholder="Your Address line 1 *"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="30"
+                    class="form-control"
+                    name="address2"
+                    [(ngModel)]="patientDetails.ptAddress2"
+                    #addresstwo="ngModel"
+                    placeholder="Your Address line 2 *"
+                  />
+                </div>
+
+                <input type="submit" class="btnRegister" value="Register" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Doctor Registration Form Ends here -->
+    </div>
+  </div>
+</div>

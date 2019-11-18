@@ -1,0 +1,32 @@
+.board {
+  width: 100%;
+  margin: 60px auto;
+  height: 500px;
+  background: #fff;
+  border-block-color: #000000;
+}
+.board .nav-tabs {
+  position: relative;
+  /* border-bottom: 0; */
+  /* width: 80%; */
+  margin: 20px auto;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+li {
+  padding-right: 50px;
+}
+#appoContainer {
+  padding: 10px;
+  margin: 10%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+#testInput {
+  margin-left: 100px;
+}
+
+#testDiv {
+  margin-right: 100px;
+}

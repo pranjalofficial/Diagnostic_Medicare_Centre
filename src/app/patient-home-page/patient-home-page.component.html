@@ -1,0 +1,318 @@
+<!-- 
+      section is there for tabs -->
+
+<section style="background:#ffffff;">
+  <div class="container">
+    <div class="row">
+      <div class="board">
+        <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+        <div class="board-inner">
+          <ul class="nav nav-tabs" id="myTab">
+            <li class="active">
+              <a href="#booking" data-toggle="tab" title="welcome">
+                <i class="material-icons">
+                  assignment
+                </i>
+                <p>Booking Appointment</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#test" data-toggle="tab" title="profile">
+                <i class="material-icons">
+                  assignment_turned_in
+                </i>
+                <p>Test Result</p>
+              </a>
+            </li>
+            <li>
+              <a href="#status" data-toggle="tab" title="bootsnipp goodies">
+                <i class="material-icons">
+                  announcement
+                </i>
+                <p>Appointment Status</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content">
+          <!-- First Tab Content -- Booking Appointment -->
+          <div id="booking" class="tab-pane fade in active">
+            <br />
+            <h3>Book Doctors Appointment</h3>
+            <br />
+            <section>
+              <div class="col-auto my-1">
+                <form (ngSubmit)="onSubmit()">
+                  <div class="form-group row">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect"
+                      >MediCare Service</label
+                    >
+                    <select
+                      name="mediCareId"
+                      class="custom-select mr-sm-2"
+                      id="inlineFormCustomSelect"
+                      (change)="onChange($event.target.value)"
+                      #mediCareId="ngModel"
+                      [(ngModel)]="newAppointment.apMdMedicareServiceId"
+                    >
+                      <option
+                        [value]="item.mdMedicareId"
+                        *ngFor="let item of medicareDetails"
+                        >{{ item.mdMedicareService }}</option
+                      >
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <label class="mr-sm-2 " for="inlineFormCustomSelect"
+                      >Doctors</label
+                    >
+                    <select
+                      name="mediCareDr"
+                      class="custom-select mr-sm-2"
+                      id="inlineFormCustomSelect"
+                      #mediCareDr="ngModel"
+                      [(ngModel)]="newAppointment.apDrUserId"
+                    >
+                      <option
+                        [value]="item.drUserId"
+                        *ngFor="let item of detailsdr"
+                        >{{ item.drFirstName }},{{ item.drLastName }}</option
+                      >
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <label
+                      for="example-date-input mr-sm-2"
+                      class="col-2 col-form-label"
+                      >Date</label
+                    >
+                    <div class="mr-sm-2">
+                      <input
+                        name="Date"
+                        class="form-control"
+                        type="date"
+                        id="example-date-input"
+                        [min]="minDate" 
+                        value=""
+                        name="dateAp"
+                        #dateAp="ngModel"
+                        [(ngModel)]="newAppointment.apDate"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label
+                      for="example-time-input mr-sm-2"
+                      class="col-2 col-form-label"
+                      #timeAp
+                      >Time</label
+                    >
+                    <div class="mr-sm-2">
+                      <input
+                        name="time"
+                        class="form-control"
+                        type="time"
+                        id="example-time-input"
+                        value=""
+                        name="timeAp"
+                        #timeAp="ngModel"
+                        [(ngModel)]="newAppointment.apTime"
+                      />
+                    </div>
+                  </div>
+                  <input
+                    type="submit"
+                    class="btn btn-primary"
+                    value="Book Appointment"
+                  />
+                  <p>{{ msg }}</p>
+                </form>
+              </div>
+            </section>
+          </div>
+
+          <!-- First tab content ends Here -->
+
+          <!-- Second Tab to view Test Result -->
+          <div id="test" class="tab-pane fade">
+            <br />
+            <h3>View Test Results</h3>
+            <div class="container-test" style="border: #000000 5px;">
+              <div class="col-auto my-1" id="appoContainer">
+                <div id="testDiv">Report ID:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtReportId"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Service Date:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtServiceDate | date"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Test Result Date:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtTestResultDate | date"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Actual Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag1ActualValue"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Test Result Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag1NormalRange"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Actual Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag2ActualValue"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Test Result Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag2NormalRange"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Actual Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag3ActualValue"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Test Result Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag3NormalRange"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Actual Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag4ActualValue"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Test Result Value:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDiag4NormalRange"
+                  [disabled]="true"
+                />
+                <div id="testDiv">Doctor Comments:</div>
+                <input
+                  type="text"
+                  id="testInput"
+                  [value]="testResult.mtDoctorComments"
+                  [disabled]="true"
+                />
+              </div>
+            </div>
+
+            <br />
+          </div>
+
+          <!-- Second tab ends Here -->
+
+          <!-- View Status Tab -->
+          <div id="status" class="tab-pane fade">
+            <br />
+            <h3>View Appointment Status</h3>
+            <br />
+            <div class="container-appointment" style="border: #000000 5px;">
+              <div
+                class="col-auto my-1"
+                *ngFor="let items of appStatusDetails"
+                id="appoContainer"
+              >
+                <span class=" label label-default mr-sm-2"
+                  >Appointment ID: {{ items.apAppointmentId }}
+                </span>
+                <br />
+                <br />
+                <span
+                  ><label
+                    class="label label-default mr-sm-2 "
+                    for="inlineFormCustomSelect"
+                    >Doctors Name:</label
+                  ></span
+                >
+                <span>{{ items.apDrUserId }}</span>
+                <br />
+                <span
+                  ><label
+                    class="label label-default mr-sm-2 "
+                    for="inlineFormCustomSelect"
+                    >Patient Name:</label
+                  ></span
+                >
+                <span>{{ items.apPtUserId }}</span>
+                <br />
+                <span
+                  ><label
+                    class="label label-default mr-sm-2 "
+                    for="inlineFormCustomSelect"
+                    >MediCare Service:</label
+                  ></span
+                >
+                <span>{{ items.apMdMedicareServiceId }}</span>
+                <br />
+                <span
+                  ><label
+                    class="label label-default mr-sm-2 "
+                    for="inlineFormCustomSelect"
+                    >Date:</label
+                  ></span
+                >
+                <span>{{ items.apDate | date }}</span>
+                <br />
+                <span
+                  ><label
+                    class="label label-default mr-sm-2 "
+                    for="inlineFormCustomSelect"
+                    >Time:</label
+                  ></span
+                >
+                <span>{{ items.apTime }}</span>
+                <br />
+                <span
+                  ><label
+                    class="label label-default mr-sm-2 "
+                    for="inlineFormCustomSelect"
+                    >Status:</label
+                  ></span
+                >
+                <span class="label label-warning">{{
+                  items.apStatus ? "Approved" : "Pending"
+                }}</span>
+                <br />
+              </div>
+            </div>
+          </div>
+          <!-- View Status Tab Ends Here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 
+    tabs ends here -->
